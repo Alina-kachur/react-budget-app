@@ -12,6 +12,7 @@ interface ICurrency {
 interface ICurrencyContext {
   currencies: ICurrency[];
   curentCurrency: ICurrency;
+  setNewCurrency: (option: ICurrency) => void;
 }
 
 export { type ICurrencyContextProvider, type ICurrency, type ICurrencyContext };

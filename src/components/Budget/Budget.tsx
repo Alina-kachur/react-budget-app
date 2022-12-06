@@ -1,5 +1,6 @@
 import { CustomSelect } from "../CustomSelect/CustomSelect";
 import { Title } from "../Title/Title";
+import { TotalBudget } from "../TotalBudget/TotalBudget";
 import { StyledBudget } from "./styles";
 
 export const Budget = () => {
@@ -7,6 +8,7 @@ export const Budget = () => {
     <StyledBudget>
       <Title> Budget App</Title>
       <CustomSelect />
+      <TotalBudget></TotalBudget>
     </StyledBudget>
   );
 };
