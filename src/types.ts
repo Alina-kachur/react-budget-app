@@ -1,15 +1,17 @@
 import { ReactNode } from "react";
 import { Currency } from "./config/currency";
 
-export interface ICurrencyContextProvider {
+interface ICurrencyContextProvider {
   children: ReactNode;
 }
 
-export interface ICurrency {
+interface ICurrency {
   label: keyof typeof Currency;
   value: Currency;
 }
-
-export interface ICurrencyContext {
+interface ICurrencyContext {
   currencies: ICurrency[];
+  curentCurrency: ICurrency;
 }
+
+export { type ICurrencyContextProvider, type ICurrency, type ICurrencyContext };
