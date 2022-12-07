@@ -13,8 +13,8 @@ export const Form = () => {
     reset,
   } = useForm<IFormValues>();
 
-  const onSubmit: SubmitHandler<IFormValues> = ({ name, cost }) => {
-    console.log(name, cost);
+  const onSubmit: SubmitHandler<IFormValues> = (newExpense) => {
+    // addNewExpense(newExpense)
     reset();
   };
 
