@@ -18,5 +18,19 @@ interface IFormValues {
   name: string;
   cost: number;
 }
+interface IBudgetContext {
+  budget: number;
+  setNewBudget: (newBudget: number) => void;
+}
+interface IBudgetContextProvider {
+  children: ReactNode;
+}
 
-export { type ICurrencyContextProvider, type ICurrency, type ICurrencyContext, type IFormValues };
+export {
+  type ICurrencyContextProvider,
+  type ICurrency,
+  type ICurrencyContext,
+  type IFormValues,
+  type IBudgetContext,
+  type IBudgetContextProvider,
+};
