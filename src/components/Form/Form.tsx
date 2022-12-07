@@ -24,7 +24,7 @@ export const Form = () => {
       <StyledInput
         {...register("name", {
           required: "Expense name is required",
-          maxLength: { value: 20, message: "Max 20 characters" },
+          maxLength: { value: 15, message: "Max 15 characters" },
           minLength: { value: 3, message: "Min 3 characters" },
         })}
         placeholder="enter name ..."
@@ -34,7 +34,7 @@ export const Form = () => {
       <StyledInput
         {...register("cost", {
           required: "Expense cost is required",
-          maxLength: { value: 7, message: "Max 7 characters" },
+          maxLength: { value: 5, message: "Max 5 characters" },
         })}
         placeholder="enter cost ..."
         type="number"

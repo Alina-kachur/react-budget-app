@@ -7,5 +7,5 @@ export const StyledApp = styled.div`
   min-height: 100vh;
   width: clamp(350px, 50%, 450px);
   background-color: white;
-  padding: 50px 30px;
+  padding: 40px 30px;
 `;

@@ -1,7 +1,11 @@
 import { useCurrencyContext } from "../../context/CurrencyContext/CurrencyContext";
-import { StyledTotalBudget } from "./styles";
+import { StyledTotalBudget, TitleBudget } from "./styles";
 
 export const TotalBudget = () => {
   const { curentCurrency } = useCurrencyContext();
-  return <StyledTotalBudget>{curentCurrency.value}300</StyledTotalBudget>;
+  return (
+    <StyledTotalBudget>
+      <TitleBudget>Budget: {curentCurrency.value}</TitleBudget>
+    </StyledTotalBudget>
+  );
 };

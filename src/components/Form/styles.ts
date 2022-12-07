@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledForm = styled.form`
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr;
   grid-gap: 20px;
 `;
 
