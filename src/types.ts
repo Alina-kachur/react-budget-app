@@ -14,5 +14,9 @@ interface ICurrencyContext {
   curentCurrency: ICurrency;
   setNewCurrency: (option: ICurrency) => void;
 }
+interface IFormValues {
+  name: string;
+  cost: number;
+}
 
-export { type ICurrencyContextProvider, type ICurrency, type ICurrencyContext };
+export { type ICurrencyContextProvider, type ICurrency, type ICurrencyContext, type IFormValues };

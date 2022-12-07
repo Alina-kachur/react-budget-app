@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-// import url ('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
 
 export const GlobalStyle = createGlobalStyle`
 html {
@@ -23,4 +22,8 @@ img {
 button{
 	cursor: pointer;
 }
+#root {
+        display: grid;
+        background-color: #1e3542;
+    }
 `;
