@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { Currency } from "../../config/currency";
-import { ICurrencyContext, ICurrencyContextProvider } from "../../types";
+import { IContextProvider, ICurrencyContext } from "../../types";
 
 const CurrencyContext = createContext<ICurrencyContext>({} as ICurrencyContext);
 
@@ -33,7 +33,7 @@ const useCurrencyContextValue = () => {
 
 export const useCurrencyContext = () => useContext<ICurrencyContext>(CurrencyContext);
 
-export const CurrencyContextProvider = ({ children }: ICurrencyContextProvider) => {
+export const CurrencyContextProvider = ({ children }: IContextProvider) => {
   return (
     <CurrencyContext.Provider value={useCurrencyContextValue()}>
       {children}

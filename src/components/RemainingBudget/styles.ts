@@ -7,6 +7,8 @@ interface IProps {
 
 const StyledRemainingBudget = styled(StyledTotalBudget)<IProps>`
   background-color: ${({ $isOverSpending }) => ($isOverSpending ? "#FF0000" : "#CCD5FF")};
+
+  transition: 0.5s;
 `;
 
 const TitleRemaining = styled.h4`
@@ -17,5 +19,7 @@ const TitleRemaining = styled.h4`
   line-height: 24px;
 `;
 
-const TitleOverSpending = styled(TitleRemaining)``;
+const TitleOverSpending = styled(TitleRemaining)`
+  color: #ffffff;
+`;
 export { StyledRemainingBudget, TitleRemaining, TitleOverSpending };

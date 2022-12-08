@@ -5,11 +5,10 @@ import { useExpensesContext } from "context/ExpensesContext/ExpensesContext";
 import { useInput } from "hooks/useInput";
 import { NotFoundTitle, StyledExpenses } from "./styles";
 import { useState, useEffect } from "react";
-import { IExpense, IExpensesContext } from "types";
 
 export const Expenses = () => {
   const search = useInput();
-  const { expenses, addNewExpenses, deleteExpenses } = useExpensesContext();
+  const { expenses } = useExpensesContext();
   const [filteredExpense, setFilteredExpense] = useState(expenses);
 
   useEffect(() => {

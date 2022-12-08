@@ -1,3 +1,4 @@
+import { AppContext } from "context/AppContext/AppContext";
 import { BudgetContextProvider } from "context/BudgetContext/BudgetContext";
 import { ExpensesContextProvider } from "context/ExpensesContext/ExpensesContext";
 import ReactDOM from "react-dom/client";
@@ -6,11 +7,9 @@ import { CurrencyContextProvider } from "./context/CurrencyContext/CurrencyConte
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
-  <CurrencyContextProvider>
-    <BudgetContextProvider>
-      <ExpensesContextProvider>
-        <App />
-      </ExpensesContextProvider>
-    </BudgetContextProvider>
-  </CurrencyContextProvider>,
+  <AppContext
+    components={[CurrencyContextProvider, BudgetContextProvider, ExpensesContextProvider]}
+  >
+    <App />
+  </AppContext>,
 );

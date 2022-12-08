@@ -7,7 +7,6 @@ import { useExpensesContext } from "context/ExpensesContext/ExpensesContext";
 
 interface IProps {
   expense: IExpense;
-  onClick: () => void;
 }
 
 export const ExpensesItem = ({ expense: { name, cost, id } }: IProps) => {

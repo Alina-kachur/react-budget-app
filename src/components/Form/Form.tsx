@@ -3,9 +3,14 @@ import { StyledInput } from "components/Input/styles";
 import { Title } from "components/Title/Title";
 import { useExpensesContext } from "context/ExpensesContext/ExpensesContext";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { IFormValues } from "types";
 import { StyledForm, SpanErrors } from "./styles";
 import { v4 as uuidv4 } from "uuid";
+import { useBudgetContext } from "context/BudgetContext/BudgetContext";
+
+interface IFormValues {
+  name: string;
+  cost: number;
+}
 
 export const Form = () => {
   const {
@@ -15,9 +20,20 @@ export const Form = () => {
     reset,
   } = useForm<IFormValues>();
   const { addNewExpenses } = useExpensesContext();
-  const onSubmit: SubmitHandler<IFormValues> = ({ name, cost }) => {
-    addNewExpenses({ name, cost, id: uuidv4() });
-    reset();
+  const { budget } = useBudgetContext();
+
+  const onSubmit: SubmitHandler<IFormValues> = (data) => {
+    const newExpense = {
+      name: data.name,
+      cost: data.cost,
+      id: uuidv4(),
+    };
+    if (budget) {
+      addNewExpenses(newExpense);
+      // reset();
+    } else {
+      alert("Enter budget");
+    }
   };
 
   return (
@@ -42,7 +58,7 @@ export const Form = () => {
         type="number"
       />
       {errors.cost && <SpanErrors>{errors.cost.message}</SpanErrors>}
-      <Button type={"submit"}>Done</Button>
+      <Button type="submit">Done</Button>
     </StyledForm>
   );
 };

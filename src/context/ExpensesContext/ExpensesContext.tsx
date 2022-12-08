@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import { IExpensesContext, IExpensesContextProvider } from "types";
+import { IContextProvider, IExpensesContext } from "types";
 
 const ExpensesContext = createContext<IExpensesContext>({} as IExpensesContext);
 
@@ -19,9 +19,9 @@ const useExpensesContextValue = () => {
   return expensesContext;
 };
 
-export const useExpensesContext = () => useContext<IExpensesContext>(ExpensesContext);
+export const useExpensesContext = () => useContext(ExpensesContext);
 
-export const ExpensesContextProvider = ({ children }: IExpensesContextProvider) => {
+export const ExpensesContextProvider = ({ children }: IContextProvider) => {
   return (
     <ExpensesContext.Provider value={useExpensesContextValue()}>
       {children}
