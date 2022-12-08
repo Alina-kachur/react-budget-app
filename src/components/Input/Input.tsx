@@ -1,8 +1,6 @@
 import { StyledInput } from "./styles";
-import { ChangeEvent } from "react";
 interface IProps {
   placeholder: string;
-
   type?: string;
   value: string;
 }

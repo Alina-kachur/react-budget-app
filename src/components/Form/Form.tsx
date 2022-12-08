@@ -1,11 +1,10 @@
 import { Button } from "components/Button/Button";
 import { StyledInput } from "components/Input/styles";
 import { Title } from "components/Title/Title";
-import { useExpensesContext } from "context/ExpensesContext/ExpensesContext";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { StyledForm, SpanErrors } from "./styles";
 import { v4 as uuidv4 } from "uuid";
-import { useBudgetContext } from "context/BudgetContext/BudgetContext";
+import { useBudgetContext, useExpensesContext } from "context";
 
 interface IFormValues {
   name: string;
@@ -30,7 +29,7 @@ export const Form = () => {
     };
     if (budget) {
       addNewExpenses(newExpense);
-      // reset();
+      reset();
     } else {
       alert("Enter budget");
     }

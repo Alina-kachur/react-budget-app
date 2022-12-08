@@ -1,10 +1,10 @@
 import { ExpensesList } from "components/ExpensesList/ExpensesList";
 import { StyledInput } from "components/Input/styles";
 import { Title } from "components/Title/Title";
-import { useExpensesContext } from "context/ExpensesContext/ExpensesContext";
-import { useInput } from "hooks/useInput";
 import { NotFoundTitle, StyledExpenses } from "./styles";
 import { useState, useEffect } from "react";
+import { useInput } from "hooks";
+import { useExpensesContext } from "context";
 
 export const Expenses = () => {
   const search = useInput();

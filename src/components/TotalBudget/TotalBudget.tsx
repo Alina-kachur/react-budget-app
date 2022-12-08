@@ -1,7 +1,6 @@
-import { useBudgetContext } from "context/BudgetContext/BudgetContext";
-import { useInput } from "hooks/useInput";
+import { useBudgetContext, useCurrencyContext } from "context";
+import { useInput } from "hooks";
 import { useState } from "react";
-import { useCurrencyContext } from "../../context/CurrencyContext/CurrencyContext";
 import { StyledTotalBudget, TitleBudget, Button, InputBudget } from "./styles";
 
 export const TotalBudget = () => {
