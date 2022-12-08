@@ -1,6 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import { IExpense, IExpensesContext, IExpensesContextProvider } from "types";
-import { v4 as uuidv4 } from "uuid";
+import { IExpensesContext, IExpensesContextProvider } from "types";
 
 const ExpensesContext = createContext<IExpensesContext>({} as IExpensesContext);
 
