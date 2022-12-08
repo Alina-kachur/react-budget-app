@@ -1,5 +1,5 @@
 import { StylesConfig } from "react-select";
-import { ICurrency } from "types";
+import { ICurrency } from "types/types";
 
 export const styles: StylesConfig<ICurrency> = {
   control: (baseStyles) => ({

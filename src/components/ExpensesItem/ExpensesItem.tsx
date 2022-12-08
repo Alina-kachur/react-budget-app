@@ -1,5 +1,5 @@
 import { Badge } from "components/Badge/Badge";
-import { IExpense } from "types";
+import { IExpense } from "types/types";
 import { ButtonDelete, ExpenseTitle, StyledExpensesItem } from "./styles";
 import { ReactComponent as DeleteIcon } from "../../assets/icons/close.svg";
 import { useCurrencyContext } from "context/CurrencyContext/CurrencyContext";

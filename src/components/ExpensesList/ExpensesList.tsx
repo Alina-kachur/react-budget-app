@@ -1,5 +1,5 @@
 import { ExpensesItem } from "components/ExpensesItem/ExpensesItem";
-import { IExpense } from "types";
+import { IExpense } from "types/types";
 import { StyledExpensesList } from "./styles";
 
 interface IProps {

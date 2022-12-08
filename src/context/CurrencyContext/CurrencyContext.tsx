@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { Currency } from "../../config/currency";
-import { IContextProvider, ICurrencyContext } from "../../types";
+import { IContextProvider, ICurrencyContext } from "../../types/types";
 
 const CurrencyContext = createContext<ICurrencyContext>({} as ICurrencyContext);
 

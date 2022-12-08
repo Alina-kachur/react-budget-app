@@ -1,5 +1,5 @@
 import { JSXElementConstructor, PropsWithChildren, ReactNode } from "react";
-import { IContextProvider } from "types";
+import { IContextProvider } from "types/types";
 
 interface IAppContext {
   components: Array<JSXElementConstructor<PropsWithChildren<IContextProvider>>>;

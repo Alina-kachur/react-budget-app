@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Currency } from "./config/currency";
+import { Currency } from "../config/currency";
 
 interface ICurrency {
   label: keyof typeof Currency;

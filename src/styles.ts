@@ -5,8 +5,8 @@ export const StyledApp = styled.div`
   place-self: center center;
   flex-direction: column;
   gap: 30px;
-  min-height: 100vh;
   width: clamp(320px, 100%, 450px);
-  background-color: white;
+  min-height: 100vh;
   padding: 40px 20px;
+  background-color: white;
 `;

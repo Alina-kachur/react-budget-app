@@ -13,7 +13,6 @@ const StyledRemainingBudget = styled(StyledTotalBudget)<IProps>`
 
 const TitleRemaining = styled.h4`
   font-family: sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
