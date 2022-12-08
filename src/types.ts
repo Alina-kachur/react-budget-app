@@ -32,7 +32,7 @@ interface IExpense {
 }
 interface IExpensesContext {
   expenses: IExpense[];
-  setNewExpenses: (newExpense: IExpense) => void;
+  addNewExpenses: (newExpense: IExpense) => void;
   deleteExpenses: (id: string) => void;
 }
 interface IExpensesContextProvider {

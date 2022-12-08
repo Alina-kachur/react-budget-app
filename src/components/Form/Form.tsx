@@ -1,9 +1,11 @@
 import { Button } from "components/Button/Button";
 import { StyledInput } from "components/Input/styles";
 import { Title } from "components/Title/Title";
+import { useExpensesContext } from "context/ExpensesContext/ExpensesContext";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { IFormValues } from "types";
 import { StyledForm, SpanErrors } from "./styles";
+import { v4 as uuidv4 } from "uuid";
 
 export const Form = () => {
   const {
@@ -12,9 +14,9 @@ export const Form = () => {
     formState: { errors },
     reset,
   } = useForm<IFormValues>();
-
-  const onSubmit: SubmitHandler<IFormValues> = (newExpense) => {
-    // addNewExpense(newExpense)
+  const { addNewExpenses } = useExpensesContext();
+  const onSubmit: SubmitHandler<IFormValues> = ({ name, cost }) => {
+    addNewExpenses({ name, cost, id: uuidv4() });
     reset();
   };
 
@@ -40,7 +42,7 @@ export const Form = () => {
         type="number"
       />
       {errors.cost && <SpanErrors>{errors.cost.message}</SpanErrors>}
-      <Button>Done</Button>
+      <Button type={"submit"}>Done</Button>
     </StyledForm>
   );
 };

@@ -3,8 +3,9 @@ import { ReactNode } from "react";
 
 interface IProps {
   children: ReactNode;
+  type?: "button" | "submit" | "reset";
 }
 
-export const Button = ({ children }: IProps) => {
-  return <StyledButton>{children}</StyledButton>;
+export const Button = ({ children, type }: IProps) => {
+  return <StyledButton type={type}>{children}</StyledButton>;
 };

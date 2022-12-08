@@ -4,7 +4,7 @@ const StyledInput = styled.input`
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   border: none;
-  padding: 20px;
+  padding: 15px 20px;
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
