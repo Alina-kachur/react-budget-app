@@ -81,7 +81,7 @@ Demo version of the project [DEMO](https://alina-kachur.github.io/react-budget-a
 
 My email - [alinakachur32@gmail.com](alinakachur32@gmail.com)
 
-Project Link: [https://alina-kachur.github.io/react-tips-calculator/](https://alina-kachur.github.io/react-budget-app/)
+Project Link: [https://alina-kachur.github.io/react-budget-app/](https://alina-kachur.github.io/react-budget-app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
