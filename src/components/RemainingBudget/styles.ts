@@ -1,9 +1,12 @@
+import { StyledTotalBudget } from "components/TotalBudget/styles";
 import styled from "styled-components";
 
-const StyledRemainingBudget = styled.div`
-  background: #ccd5ff;
-  border-radius: 10px;
-  padding: 40px 20px;
+interface IProps {
+  $isOverSpending: boolean;
+}
+
+const StyledRemainingBudget = styled(StyledTotalBudget)<IProps>`
+  background-color: ${({ $isOverSpending }) => ($isOverSpending ? "#FF0000" : "#CCD5FF")};
 `;
 
 const TitleRemaining = styled.h4`
@@ -13,4 +16,6 @@ const TitleRemaining = styled.h4`
   font-size: 20px;
   line-height: 24px;
 `;
-export { StyledRemainingBudget, TitleRemaining };
+
+const TitleOverSpending = styled(TitleRemaining)``;
+export { StyledRemainingBudget, TitleRemaining, TitleOverSpending };
