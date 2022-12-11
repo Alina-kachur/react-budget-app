@@ -36,7 +36,7 @@ export const Form = () => {
   };
 
   return (
-    <StyledForm onSubmit={handleSubmit(onSubmit)}>
+    <StyledForm id="expense-form" onSubmit={handleSubmit(onSubmit)}>
       <Title>Add Expense</Title>
       <StyledInput
         {...register("name", {
@@ -57,7 +57,9 @@ export const Form = () => {
         type="number"
       />
       {errors.cost && <SpanErrors>{errors.cost.message}</SpanErrors>}
-      <Button type="submit">Done</Button>
+      <Button form="expense-form" type="submit">
+        Done
+      </Button>
     </StyledForm>
   );
 };

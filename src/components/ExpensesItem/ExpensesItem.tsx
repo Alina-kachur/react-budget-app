@@ -19,10 +19,8 @@ export const ExpensesItem = ({ expense: { name, cost, id } }: IProps) => {
     <StyledExpensesItem>
       <ExpenseTitle>{name}</ExpenseTitle>
       <Badge>
-        <>
-          {curentCurrency}
-          {cost}
-        </>
+        {curentCurrency.value}
+        {cost}
       </Badge>
       <ButtonDelete onClick={handleDelete}>
         <DeleteIcon />
