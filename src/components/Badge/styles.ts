@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 const StyledBadge = styled.div`
-  padding: 3px 15px;
+  padding: 5px 15px;
   background: #23c9ff;
   border-radius: 10px;
+  align-self: right: ;;
 `;
 export { StyledBadge };

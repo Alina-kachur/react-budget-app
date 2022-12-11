@@ -10,5 +10,6 @@ const StyledButton = styled.button`
   background: #23c9ff;
   border-radius: 10px;
   border: none;
+  cursor: pointer;
 `;
 export { StyledButton };

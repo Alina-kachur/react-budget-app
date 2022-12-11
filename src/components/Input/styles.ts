@@ -14,5 +14,6 @@ const StyledInput = styled.input`
   ::-webkit-outer-spin-button {
     display: none;
   }
+  cursor: pointer;
 `;
 export { StyledInput };

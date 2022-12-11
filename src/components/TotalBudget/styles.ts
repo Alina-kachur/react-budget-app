@@ -25,6 +25,7 @@ const Button = styled.button`
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
+  cursor: pointer;
 `;
 
 const InputBudget = styled(StyledInput)`
@@ -33,5 +34,6 @@ const InputBudget = styled(StyledInput)`
   color: rgba(255, 255, 255, 0.6);
   background-color: #7cc6fe;
   box-shadow: none;
+  cursor: pointer;
 `;
 export { StyledTotalBudget, TitleBudget, Button, InputBudget };

@@ -1,7 +1,7 @@
 import { ExpensesList } from "components/ExpensesList/ExpensesList";
 import { StyledInput } from "components/Input/styles";
 import { Title } from "components/Title/Title";
-import { NotFoundTitle, StyledExpenses } from "./styles";
+import { ExpensesListContainer, NotFoundTitle, StyledExpenses } from "./styles";
 import { useState, useEffect } from "react";
 import { useInput } from "hooks";
 import { useExpensesContext } from "context";
@@ -26,7 +26,9 @@ export const Expenses = () => {
       {expenses.length ? (
         <ExpensesList expenses={filteredExpense} />
       ) : (
-        <NotFoundTitle>Oooops 🙈</NotFoundTitle>
+        <ExpensesListContainer>
+          <NotFoundTitle>Oooops 🙈</NotFoundTitle>
+        </ExpensesListContainer>
       )}
     </StyledExpenses>
   );
